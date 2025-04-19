@@ -75,19 +75,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'hostel.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='sqlite:///db.sqlite3',  # usa SQLite localmente
-        conn_max_age=600,                # mantém a conexão aberta por mais tempo
-        ssl_require=True                 # importante para conexão segura com Render
+        default=os.environ.get('DATABASE_URL', 'sqlite:///db.sqlite3'),  # Usa SQLite localmente por padrão
+        conn_max_age=600,                # Mantém a conexão aberta por mais tempo
+        ssl_require=True                 # Necessário para conexões seguras (em produção)
     )
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
