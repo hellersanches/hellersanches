@@ -1,7 +1,7 @@
 [project]
-name = "hostal-manager"
+name = "hostal_manager"
 version = "0.1.0"
-description = ""
+description = "Sistema de gerenciamento de hostel"
 authors = [
     {name = "Heller Sanches",email = "hellersanches@gmail.com"}
 ]
