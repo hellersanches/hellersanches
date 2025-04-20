@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 import os
 from pathlib import Path
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -78,14 +79,7 @@ WSGI_APPLICATION = 'hostel.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hostal_db',
-        'USER': 'admin',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(default='postgresql://hostal_id4g_user:xr9vfnKx68GIagyv3Zq3ZoitZ6BDIGKp@dpg-d01u7tadbo4c7394ukag-a/hostal_id4g')
 }
 
 # Password validation
