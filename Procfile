@@ -1,1 +1,1 @@
-web: gunicorn Cadastro_de_Clientes.wsgi
+web: gunicorn cadastro_clientes.clientes.wsgi
